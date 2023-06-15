@@ -2,7 +2,7 @@
 
 /**
  * main - Prints the size of various types based on
- * 	compiler type
+ *	compiler type
  * Return: Always 0.
  *
  */
