@@ -8,18 +8,15 @@
  * return: no value.
  */
 
-void reverse_array(int *a, int n)
+voidreverse_array(int *a, int n)
 {
-	int i;
-	int b;
+	int i, j, tmp;
 
-	i = 0;
-	while (i < n)
+	for (i = 0; i < n / 2; i++)
 	{
-		n--;
-		b = a[i];
-		a[i] = a[n];
-		a[n] = b;
-		i++;
+		j = n - i - 1;
+		tmp = *(a + i);
+		*(a + i) = *(a + j);
+		*(a + j) = tmp;
 	}
-}
+} 
