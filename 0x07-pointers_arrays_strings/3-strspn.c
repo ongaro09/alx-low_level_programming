@@ -1,4 +1,4 @@
-#inlude "main.h"
+#include "main.h"
 /**
  * _strspn -  locates the first occurrence in the string.
  * @s: initial segment.
@@ -26,4 +26,4 @@ unsigned int _strspn(char *s, char *accept)
 		incr++;
 	}
 	return (incr);
-}c
+}
