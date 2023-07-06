@@ -1,18 +1,14 @@
 #include "main.h"
 /**
- * factorial - prints factorial of a number
- * @n: number whose factorial is to be displayed
- * Return: 0, -1, or the factorial
+ * _strlen_recursion - returns lenth of a string
+ * @s: string whose length is returned
+ * Return: 0 or length of string
  */
-int factorial(int n)
+int _strlen_recursion(char *s)
 {
-	if (n < 0)
+	if (*s == '\0')
 	{
-		return (-1);
+		return (0);
 	}
-	if (n <= 1)
-	{
-		return (1);
-	}
-	return (n * factorial(n - 1));
+	return (1 + _strlen_recursion(s + 1));
 }
