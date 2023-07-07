@@ -6,7 +6,7 @@
  *main -  multiplies two numbers.
  *@argv: The array of arguments
  *@argc: The number of attributes
- *Return: 0 if successful, 1 no arguments
+ *Return: 0.
  */
 
 int main(int argc, char *argv[])
