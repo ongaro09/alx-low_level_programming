@@ -1,18 +1,18 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <stdio.h>
 
 /**
  *main -  multiplies two numbers.
- *@argv: The array of arguments
  *@argc: The number of attributes
- *Return: 0.
+ *@argv: The array of arguments
+ *Return: 0 if successful, 1 no arguments
  */
 
 int main(int argc, char *argv[])
 {
-	int sum;
 	int i, j;
+	int sum;
 
 	if (argc <= 1)
 	{
@@ -38,4 +38,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 
 	return (0);
-}
