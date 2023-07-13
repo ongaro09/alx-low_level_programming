@@ -1,27 +1,27 @@
 #include "main.h"
 #include <stdlib.h>
-#include "2-strlen.c"
 
 /**
- * argstostr - concatenates all arguments
+ * argstostr - concatanates all arguments of program
  * @ac: number of arguments
  * @av: array of arguments
- * Return: pointer to the concatenated string
+ *
+ * Return: pointer to newly allocated space in memory
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int a, b, i, n = ac;
+	int arg, i, n = ac, byte;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (a = 0; a < ac; a++)
+	for (arg = 0; arg < ac; arg++)
 	{
-		for (b = 0; av[a][b]; b++)
+		for (byte = 0; av[arg][byte]; byte++)
 			n++;
 	}
+
 	str = malloc(n + 1);
 
 	if (str == NULL)
@@ -29,14 +29,16 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 
-	for (a = 0; a < ac; a++)
+	for (arg = 0; arg < ac; arg++)
 	{
-		for (b = 0; av[a][b]; b++)
-			str[i++] = av[a][b];
+		for (byte = 0; av[arg][byte]; byte++)
+			str[i++] = av[arg][byte];
+
 		str[i++] = '\n';
 	}
+
 	str[n] = '\0';
 
 	return (str);
-}
 
+}
