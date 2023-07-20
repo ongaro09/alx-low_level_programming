@@ -28,10 +28,13 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	for (i = 0; i < bytes; i++)
+	if (bytes > 0)
 	{
-		printf("%02hhx ", main_addr[i]);
+		for (i = 0; i < bytes - 1; i++)
+		{
+			printf("%02hhx ", main_addr[i]);
+		}
+		printf("%02hhx\n", main_addr[i]);
 	}
-	printf("\n");
 	return (0);
 }
