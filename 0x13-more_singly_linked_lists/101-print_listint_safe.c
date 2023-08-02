@@ -26,19 +26,18 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		count++;
 	}
+
 	if (cycle)
 	{
-		tortoise = head;
-
+		hare = head;
 		while (tortoise != hare)
 		{
-			printf("[%p] %d\n", (void *)tortoise, tortoise->n);
-			tortoise = tortoise->next;
+			printf("[%p] %d\n", (void *)hare, hare->n);
 			hare = hare->next;
+			count++;
 		}
-		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
-		count++;
-		printf("-> [%p] %d\n", (void *)hare, hare->n);
+		printf("[%p] %d\n", (void *)hare, hare->n);
+		return (count + 1);
 	}
 	else
 	{
