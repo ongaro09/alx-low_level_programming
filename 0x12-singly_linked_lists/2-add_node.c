@@ -30,10 +30,8 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	str_len = 0;
-	do {
+	while (str[str_len])
 		str_len++;
-	} while (str[str_len]);
 
 	new_node->str = str_copy;
 	new_node->len = str_len;
